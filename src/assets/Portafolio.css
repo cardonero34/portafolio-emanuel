@@ -541,22 +541,23 @@ header {
     display: block;
     width: 100%;
     height: auto;
+    z-index: 0;
   }
+}
 
-  span {
-    position: relative;
-    z-index: 1;
-    text-align: center;
-    top: 10vh;
-    left: 6vw;
-  }
+span {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  top: 10vh;
+  left: 6vw;
 }
 
 .boton-s3-verde {
   top: -71vh;
   left: 10vw;
   padding-top: 1rem;
-  z-index: 5;
+  z-index: 1;
 }
 
 .boton-s3-morado {
@@ -583,27 +584,60 @@ header {
     height: auto;
     padding: clamp(2rem, 7vh, 4rem) 1rem 0;
 
-    h1 { font-size: clamp(3.4rem, 14vw, 7rem); }
+    h1 {
+      font-size: clamp(3.4rem, 14vw, 7rem);
+    }
+
     h2 {
       margin: 1rem 0 0.75rem;
       font-size: clamp(1.25rem, 4.5vw, 2rem);
     }
+
     p {
       width: min(88vw, 35rem);
       font-size: clamp(0.75rem, 2.4vw, 1rem);
     }
   }
 
-  .d1 { top: 12vh; left: 8vw; width: 17vw; }
-  .d2 { top: 15vh; right: 8vw; width: 16vw; }
-  .d3 { width: 30vw; }
-  .d4 { width: 32vw; }
-  .d5 { width: 25vw; }
-  .d6 { width: 20vw; }
-  .d7 { width: 10vw; }
-  .d8 { width: 19vw; }
+  .d1 {
+    top: 12vh;
+    left: 8vw;
+    width: 17vw;
+  }
 
-  .cinta-global { width: 100vw; }
+  .d2 {
+    top: 15vh;
+    right: 8vw;
+    width: 16vw;
+  }
+
+  .d3 {
+    width: 30vw;
+  }
+
+  .d4 {
+    width: 32vw;
+  }
+
+  .d5 {
+    width: 25vw;
+  }
+
+  .d6 {
+    width: 20vw;
+  }
+
+  .d7 {
+    width: 10vw;
+  }
+
+  .d8 {
+    width: 19vw;
+  }
+
+  .cinta-global {
+    width: 100vw;
+  }
 
   .grupo-frases,
   .grupo-flor {
@@ -626,13 +660,21 @@ header {
   .frase2 {
     width: 39vw;
 
-    h3 { font-size: clamp(1.5rem, 5vw, 2.5rem); }
-    p { font-size: clamp(0.7rem, 2.25vw, 1rem); }
+    h3 {
+      font-size: clamp(1.5rem, 5vw, 2.5rem);
+    }
+
+    p {
+      font-size: clamp(0.7rem, 2.25vw, 1rem);
+    }
   }
 
   /* Mantener la flor y la vara en proporción; el top de la vara calcula
      el borde inferior de la orquídea según la relación ancho/alto del viewport. */
-  .flor { width: 85vw; }
+  .flor {
+    width: 85vw;
+  }
+
   .vara {
     top: calc(85vw - 75vh);
     width: 75vw;
@@ -682,8 +724,13 @@ header {
       right: 10vw;
       width: 50vw;
 
-      h2 { font-size: clamp(1.5rem, 4.5vw, 3.5rem); }
-      p { font-size: clamp(0.78rem, 1.7vw, 1.3rem); }
+      h2 {
+        font-size: clamp(1.5rem, 4.5vw, 3.5rem);
+      }
+
+      p {
+        font-size: clamp(0.78rem, 1.7vw, 1.3rem);
+      }
     }
 
     .grupo-boton-II {
@@ -710,7 +757,9 @@ header {
       text-align: center;
       transform: translate(-50%, -50%);
 
-      h3 { font-size: clamp(0.8rem, 1.8vw, 1.25rem); }
+      h3 {
+        font-size: clamp(0.8rem, 1.8vw, 1.25rem);
+      }
     }
   }
 
@@ -753,29 +802,63 @@ header {
   header {
     padding-top: 2.5rem;
 
-    h1 { font-size: clamp(3.1rem, 14.5vw, 4.5rem); }
-    h2 { font-size: clamp(1.1rem, 4.8vw, 1.5rem); }
-    p { width: 90vw; font-size: 0.72rem; }
+    h1 {
+      font-size: clamp(3.1rem, 14.5vw, 4.5rem);
+    }
+
+    h2 {
+      font-size: clamp(1.1rem, 4.8vw, 1.5rem);
+    }
+
+    p {
+      width: 90vw;
+      font-size: 0.72rem;
+    }
   }
 
-  .d1 { top: 13vh; left: 4vw; width: 19vw; }
-  .d2 { top: 16vh; right: 4vw; width: 18vw; }
+  .d1 {
+    top: 13vh;
+    left: 4vw;
+    width: 19vw;
+  }
 
-  .grupo-frases { transform: translate(0, 0) scale(0.9); }
-  .grupo-flor { transform: translate(0, 0) scale(0.84); }
+  .d2 {
+    top: 16vh;
+    right: 4vw;
+    width: 18vw;
+  }
+
+  .grupo-frases {
+    transform: translate(0, 0) scale(0.9);
+  }
+
+  .grupo-flor {
+    transform: translate(0, 0) scale(0.84);
+  }
 
   .frase1,
   .frase2 {
     width: 42vw;
 
-    h3 { font-size: clamp(1.25rem, 5.4vw, 1.75rem); }
-    p { font-size: clamp(0.65rem, 2.7vw, 0.8rem); }
+    h3 {
+      font-size: clamp(1.25rem, 5.4vw, 1.75rem);
+    }
+
+    p {
+      font-size: clamp(0.65rem, 2.7vw, 0.8rem);
+    }
   }
 
   .Nombre_seccion {
     width: 90vw;
-    h2 { font-size: clamp(2rem, 9vw, 2.8rem); }
-    p { font-size: 0.72rem; }
+
+    h2 {
+      font-size: clamp(2rem, 9vw, 2.8rem);
+    }
+
+    p {
+      font-size: 0.72rem;
+    }
   }
 
   .contenedor-card-II {
@@ -805,8 +888,13 @@ header {
       right: 7vw;
       width: 54vw;
 
-      h2 { font-size: clamp(1.25rem, 4.5vw, 2rem); }
-      p { font-size: clamp(0.68rem, 2.2vw, 0.9rem); }
+      h2 {
+        font-size: clamp(1.25rem, 4.5vw, 2rem);
+      }
+
+      p {
+        font-size: clamp(0.68rem, 2.2vw, 0.9rem);
+      }
     }
 
     .grupo-boton-II {
@@ -815,7 +903,9 @@ header {
       width: 62vw;
     }
 
-    .boton-II h3 { font-size: clamp(0.68rem, 2vw, 0.85rem); }
+    .boton-II h3 {
+      font-size: clamp(0.68rem, 2vw, 0.85rem);
+    }
   }
 
   .grupo-botones-s3 {
@@ -827,7 +917,10 @@ header {
     aspect-ratio: 2.6 / 1;
     font-size: clamp(0.6rem, 2.2vw, 0.8rem);
 
-    span { width: 80%; }
+    span {
+      width: 80%;
+    }
   }
 }
+
 /* #endregion Ajustes responsive */
