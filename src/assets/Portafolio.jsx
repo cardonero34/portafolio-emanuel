@@ -240,27 +240,29 @@ const Portafolio = () => {
                     <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat </p>
                 </div>
                 <div className="contenedor-card-II">{/* component card */}
-                    <img className="card-II" src={asset("Seccion/2/card.webp")} alt="" />
-                    <div className="foto-II foto-II-izquierda"> {/* grande */}
-                        <div className="foto-II-imagen foto-II-imagen-azul" />
-                    </div>
-                    <div className="foto-II foto-II-mini foto-II-mini-izquierda">
-                        <div className="foto-II-imagen foto-II-imagen-azul-oscuro" />
-                    </div>
-                    <div className="foto-II foto-II-derecha"> {/* grande */}
-                        <div className="foto-II-imagen foto-II-imagen-oliva" />
-                    </div>
-                    <div className="foto-II foto-II-mini foto-II-mini-derecha">
-                        <div className="foto-II-imagen foto-II-imagen-vino" />
-                    </div>
-                    <div className="texto-card-II">
-                        <h2>Proyecto_1</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat</p>
-                    </div>
-                    <div className="grupo-boton-II">
-                        <img className="forma-boton-II" src={asset("Seccion/2/btn1.webp")} alt="" />
-                        <div className="boton-II">
-                            <h3>CONTINUAR NAVEGANDO</h3>
+                    <div className="composicion-card-II">
+                        <img className="card-II" src={asset("Seccion/2/card.webp")} alt="" />
+                        <div className="foto-II foto-II-izquierda"> {/* grande */}
+                            <div className="foto-II-imagen foto-II-imagen-azul" />
+                        </div>
+                        <div className="foto-II foto-II-mini foto-II-mini-izquierda">
+                            <div className="foto-II-imagen foto-II-imagen-azul-oscuro" />
+                        </div>
+                        <div className="foto-II foto-II-derecha"> {/* grande */}
+                            <div className="foto-II-imagen foto-II-imagen-oliva" />
+                        </div>
+                        <div className="foto-II foto-II-mini foto-II-mini-derecha">
+                            <div className="foto-II-imagen foto-II-imagen-vino" />
+                        </div>
+                        <div className="texto-card-II">
+                            <h2>Proyecto_1</h2>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat</p>
+                        </div>
+                        <div className="grupo-boton-II">
+                            <img className="forma-boton-II" src={asset("Seccion/2/btn1.webp")} alt="" />
+                            <div className="boton-II">
+                                <h3>CONTINUAR NAVEGANDO</h3>
+                            </div>
                         </div>
                     </div>
                 </div>

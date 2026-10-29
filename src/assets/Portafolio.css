@@ -23,9 +23,19 @@
   --color-azul-B2: #485563;
 }
 
+
+html,
+body,
+#root {
+  width: 100vw;
+  margin: 0;
+  padding: 0;
+}
+
 body {
   overflow-x: hidden;
 }
+
 
 /* #region Decoraciones */
 .decoracion {
@@ -104,6 +114,8 @@ body {
 .portafolio {
   position: relative;
   isolation: isolate;
+  width: 100vw;
+  margin: 0;
 }
 
 .cinta-global {
@@ -336,172 +348,216 @@ header {
   width: 145vw;
 }
 
+
+/* CONTENEDOR EXTERIOR: ocupa la sección */
 .contenedor-card-II {
   position: absolute;
-  z-index: 2;
   inset: 0;
-  transform: translateX(3vw) scale(85%);
+  z-index: 2;
+  overflow: visible;
+}
 
-  .grupo-boton-II {
-    display: contents;
-  }
+/* LIENZO INTERNO: todo se escala desde aquí */
+.composicion-card-II {
+  --escala-modulo: 0.85;
 
-  .card-II,
-  .foto-II,
-  .texto-card-II,
-  .boton-II,
-  .forma-boton-II,
-  .destello-II {
-    position: absolute;
-  }
+  position: absolute;
+  top: 15%;
+  left: 60%;
+  width: 1000px;
+  height: 700px;
 
-  .card-II {
-    /* tarjeta de texto */
-    z-index: 3;
-    top: 16vh;
-    right: 1vw;
-    width: 70%;
-    height: auto;
-    pointer-events: none;
-  }
+  transform: translateX(-50%) scale(var(--escala-modulo));
+  transform-origin: top center;
+}
 
-  .foto-II {
-    /* foto container */
-    z-index: 4;
-    padding: 0.5rem;
-    background: var(--color-crema);
-    border: 2px solid rgb(76 34 56 / 18%);
-    border-radius: 0.6vw;
-    box-shadow: 0 0.5rem 1.4vh rgb(66 24 46 / 30%);
-  }
+/* TARJETA CENTRAL */
+.card-II {
+  position: absolute;
+  z-index: 3;
+  right: 10;
+  width: 1080px;
+  height: auto;
+  pointer-events: none;
+}
 
-  .foto-II::after {
-    /* cinta */
-    position: absolute;
-    z-index: 2;
-    top: -5%;
-    left: 50%;
-    width: 45%;
-    height: 14%;
-    content: "";
-    background: linear-gradient(105deg, #42182e 0%, #6c4b5c 55%, #9db7d0 100%);
-    filter: blur(0.2vw);
-    transform: translateX(-50%) rotate(-6deg);
-    pointer-events: none;
-  }
+/* FOTOGRAFÍAS */
+.foto-II {
+  position: absolute;
+  z-index: 4;
+  padding: 8px;
+  background: var(--color-crema);
+  border: 2px solid rgb(76 34 56 / 18%);
+  border-radius: 8px;
+  box-shadow: 0 8px 18px rgb(66 24 46 / 30%);
+  box-sizing: border-box;
+}
 
-  /* fotos */
-  .foto-II-izquierda {
-    /* grande 1 */
-    top: 45vh;
-    left: 26vw;
-    width: 17rem;
-    height: 22rem;
-    rotate: 15deg;
-  }
+.foto-II::after {
+  position: absolute;
+  z-index: 2;
+  top: -5%;
+  left: 50%;
+  width: 45%;
+  height: 14%;
+  content: "";
+  background: linear-gradient(105deg,
+      #42182e 0%,
+      #6c4b5c 55%,
+      #9db7d0 100%);
+  filter: blur(3px);
+  transform: translateX(-50%) rotate(-6deg);
+  pointer-events: none;
+}
 
-  .foto-II-derecha {
-    /* grande 2*/
-    top: 18vh;
-    right: 3vw;
-    width: 20rem;
-    height: 18rem;
-    rotate: -15deg;
-  }
+.foto-II-izquierda {
+  top: 240px;
+  left: 10px;
+  width: 240px;
+  height: 320px;
+  rotate: 15deg;
+}
 
-  .foto-II-mini-izquierda {
-    /* pequeña 1 */
-    top: 70vh;
-    left: 32vw;
-    rotate: -10deg;
-    z-index: 5;
-    width: 14rem;
-    height: 16rem;
-  }
+.foto-II-derecha {
+  top: 20px;
+  right: 0;
+  width: 270px;
+  height: 240px;
+  rotate: -15deg;
+}
 
-  .foto-II-mini-derecha {
-    /* pequeña 2 */
-    top: 36vh;
-    right: 2.5vw;
-    width: 12rem;
-    height: 14rem;
-    rotate: 5deg;
-  }
+.foto-II-mini-izquierda {
+  top: 440px;
+  left: 80px;
+  width: 200px;
+  height: 230px;
+  rotate: -10deg;
+  z-index: 5;
+}
 
-  .foto-II-imagen {
-    width: 100%;
-    height: 85%;
-    border: 0.4rem solid var(--color-crema);
-    box-shadow: 0 0 0.8vw rgb(66 24 46 / 25%);
-    padding: 0.5rem;
-  }
+.foto-II-mini-derecha {
+  top: 170px;
+  right: -40px;
+  width: 180px;
+  height: 190px;
+  rotate: 5deg;
+  z-index: 5;
+}
 
-  /* colores */
-  .foto-II-imagen-azul {
-    background: linear-gradient(145deg, var(--color-azul-B1), var(--color-azul-B2));
-  }
+/* ÁREA INTERIOR DE CADA FOTOGRAFÍA */
+.foto-II-imagen {
+  width: 100%;
+  height: 85%;
+  box-sizing: border-box;
+  border: 6px solid var(--color-crema);
+  box-shadow: 0 0 8px rgb(66 24 46 / 25%);
+  padding: 8px;
+}
 
-  .foto-II-imagen-oliva {
-    background: linear-gradient(145deg, var(--color-oliva), var(--color-oliva-B1));
-  }
+.foto-II-imagen-azul {
+  background: linear-gradient(145deg,
+      var(--color-azul-B1),
+      var(--color-azul-B2));
+}
 
-  .foto-II-imagen-azul-oscuro {
-    background: linear-gradient(145deg, var(--color-azul-B2), #34404d);
-  }
+.foto-II-imagen-oliva {
+  background: linear-gradient(145deg,
+      var(--color-oliva),
+      var(--color-oliva-B1));
+}
 
-  .foto-II-imagen-vino {
-    background: linear-gradient(145deg, var(--color-vino-A1), var(--color-vino-B1));
-  }
+.foto-II-imagen-azul-oscuro {
+  background: linear-gradient(145deg,
+      var(--color-azul-B2),
+      #34404d);
+}
 
-  /* contenido */
-  .texto-card-II {
-    z-index: 5;
-    top: 51vh;
-    right: 17vw;
-    width: 35vw;
-    color: #171516;
-    text-align: center;
+.foto-II-imagen-vino {
+  background: linear-gradient(145deg,
+      var(--color-vino-A1),
+      var(--color-vino-B1));
+}
 
-    h2 {
-      margin: 0 0 1.6vh;
-      font-family: var(--font-playfair), Georgia, serif;
-      margin-bottom: 2rem;
-      font-size: 3.5rem;
-      font-weight: 800;
-      line-height: 1;
-    }
+/* TEXTO DE LA TARJETA */
+.texto-card-II {
+  position: absolute;
+  z-index: 6;
+  top: 300px;
+  left: 350px;
+  width: 400px;
+  color: #171516;
+  text-align: center;
+}
 
-    p {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      font-size: 1.3rem;
-      line-height: 1.25;
-    }
-  }
+.texto-card-II h2 {
+  margin: 0 0 24px;
+  font-family: var(--font-playfair), Georgia, serif;
+  font-size: 3.5rem;
+  font-weight: 800;
+  line-height: 1;
+}
 
-  .boton-II {
-    /* texto */
-    z-index: 6;
-    top: 83vh;
-    right: -0.2vw;
-    width: 32vw;
-    color: #211a1b;
+.texto-card-II p {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  font-size: 1.3rem;
+  line-height: 1.25;
+}
 
-    h3 {
-      font-family: Arial, sans-serif;
-      font-size: 1.5rem;
-      font-weight: 700;
-    }
-  }
+/* BOTÓN: imagen y texto se posicionan juntos */
+.grupo-boton-II {
+  position: absolute;
+  z-index: 7;
+  top: 120px;
+  left: 100px;
+  width: 1340px;
+  height: 1020px;
+}
 
-  .forma-boton-II {
-    z-index: 5;
-    top: 20vh;
-    left: 30vw;
-    width: 90rem;
-    cursor: pointer;
+.forma-boton-II {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+  cursor: pointer;
+}
+
+.boton-II {
+  position: absolute;
+  z-index: 2;
+  top: 50%;
+  left: 50%;
+  width: 78%;
+  color: #211a1b;
+  text-align: center;
+  transform: translate(-50%, -50%);
+}
+
+.boton-II h3 {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+/* TABLET */
+@media (max-width: 768px) {
+  .composicion-card-II {
+    --escala-modulo: 0.7;
+    top: 143vh;
+    left: 60vw;
   }
 }
+
+/* MÓVIL */
+@media (max-width: 480px) {
+  .composicion-card-II {
+    --escala-modulo: 0.42;
+    top: 3vh;
+  }
+}
+
 
 /* #endregion Sección 2 */
 
@@ -578,10 +634,10 @@ span {
 
 /* #endregion Sección 4 */
 
-/* #region Ajustes responsive */
 @media (max-width: 768px) {
+
   header {
-    height: auto;
+    height: 20vh;
     padding: clamp(2rem, 7vh, 4rem) 1rem 0;
 
     h1 {
@@ -636,7 +692,13 @@ span {
   }
 
   .cinta-global {
-    width: 100vw;
+    top: 240vh;
+    width: 98vw;
+  }
+
+  .zona_I {
+    position: relative;
+    height: 150vh;
   }
 
   .grupo-frases,
@@ -658,7 +720,7 @@ span {
 
   .frase1,
   .frase2 {
-    width: 39vw;
+    width: 30vw;
 
     h3 {
       font-size: clamp(1.5rem, 5vw, 2.5rem);
@@ -669,103 +731,52 @@ span {
     }
   }
 
+  .frase1 {
+    top: 97vh;
+    left: 5vw;
+  }
+
+  .frase2 {
+    top: 80vh;
+    right: 3vw;
+  }
+
   /* Mantener la flor y la vara en proporción; el top de la vara calcula
      el borde inferior de la orquídea según la relación ancho/alto del viewport. */
   .flor {
-    width: 85vw;
+    width: 100vw;
+    top: -20vh;
   }
 
   .vara {
-    top: calc(85vw - 75vh);
-    width: 75vw;
+    top: 65vh;
+    width: 90vw;
   }
 
   .Nombre_seccion {
-    left: 5vw;
-    width: 90vw;
+    left: 25vw;
+    top: 77vh;
+    width: 40vw;
 
     h2 {
-      margin: 0.5rem 0;
-      font-size: clamp(2.25rem, 8vw, 4rem);
+      font-size: clamp(2.25rem, 7vw, 4rem);
     }
 
     p {
-      width: 86vw;
       font-size: clamp(0.75rem, 2.4vw, 1rem);
+      width: 55vw;
     }
   }
 
   /* La tarjeta, fotos, texto y botón se escalan como una sola composición. */
   .contenedor-card-II {
-    transform: translateX(3vw) scale(0.9);
-    transform-origin: 50% 0;
-
-    .foto-II-izquierda {
-      width: clamp(8rem, 29vw, 17rem);
-      height: clamp(10rem, 36vw, 22rem);
-    }
-
-    .foto-II-derecha {
-      width: clamp(9rem, 34vw, 20rem);
-      height: clamp(8rem, 31vw, 18rem);
-    }
-
-    .foto-II-mini-izquierda {
-      width: clamp(6.5rem, 23vw, 14rem);
-      height: clamp(7.5rem, 27vw, 16rem);
-    }
-
-    .foto-II-mini-derecha {
-      width: clamp(6rem, 20vw, 12rem);
-      height: clamp(7rem, 23vw, 14rem);
-    }
-
-    .texto-card-II {
-      right: 10vw;
-      width: 50vw;
-
-      h2 {
-        font-size: clamp(1.5rem, 4.5vw, 3.5rem);
-      }
-
-      p {
-        font-size: clamp(0.78rem, 1.7vw, 1.3rem);
-      }
-    }
-
-    .grupo-boton-II {
-      position: absolute;
-      top: 64vh;
-      left: 38vw;
-      display: block;
-      width: clamp(16rem, 55vw, 42rem);
-      aspect-ratio: 1796 / 1460;
-    }
-
-    .forma-boton-II {
-      inset: 0;
-      width: 100%;
-      height: 100%;
-      object-fit: fill;
-    }
-
-    .boton-II {
-      top: 50%;
-      right: auto;
-      left: 50%;
-      width: 78%;
-      text-align: center;
-      transform: translate(-50%, -50%);
-
-      h3 {
-        font-size: clamp(0.8rem, 1.8vw, 1.25rem);
-      }
-    }
+    transform: translate(3vw, 27vh) scale(0.6);
+    transform-origin: top center;
   }
 
   /* El arte y su rótulo viven dentro del mismo grupo para mantener el centrado. */
   .grupo-botones-s3 {
-    transform: translate(0, 0) scale(0.9);
+    transform: translate(0, 43vh) scale(0.9);
     transform-origin: 50% 0;
   }
 
@@ -795,6 +806,26 @@ span {
       line-height: 1.15;
       transform: translate(-50%, -50%);
     }
+  }
+
+
+  .boton-s3-verde {
+    top: -71vh;
+    left: 10vw;
+    padding-top: 1rem;
+    z-index: 1;
+  }
+
+  .boton-s3-morado {
+    top: -77vh;
+    left: 48vw;
+    color: var(--color-crem-A2);
+  }
+
+  .boton-s3-azul {
+    top: -63vh;
+    left: 33vw;
+    padding-top: 1rem;
   }
 }
 
@@ -862,50 +893,8 @@ span {
   }
 
   .contenedor-card-II {
-    transform: translateX(3vw) scale(0.82);
-
-    .foto-II-izquierda {
-      width: clamp(7rem, 29vw, 14rem);
-      height: clamp(9rem, 36vw, 18rem);
-    }
-
-    .foto-II-derecha {
-      width: clamp(7.5rem, 34vw, 16rem);
-      height: clamp(7rem, 31vw, 15rem);
-    }
-
-    .foto-II-mini-izquierda {
-      width: clamp(5.5rem, 23vw, 11rem);
-      height: clamp(6.5rem, 27vw, 13rem);
-    }
-
-    .foto-II-mini-derecha {
-      width: clamp(5rem, 20vw, 10rem);
-      height: clamp(6rem, 23vw, 11rem);
-    }
-
-    .texto-card-II {
-      right: 7vw;
-      width: 54vw;
-
-      h2 {
-        font-size: clamp(1.25rem, 4.5vw, 2rem);
-      }
-
-      p {
-        font-size: clamp(0.68rem, 2.2vw, 0.9rem);
-      }
-    }
-
-    .grupo-boton-II {
-      top: 66vh;
-      left: 33vw;
-      width: 62vw;
-    }
-
-    .boton-II h3 {
-      font-size: clamp(0.68rem, 2vw, 0.85rem);
-    }
+    transform: translateX(3vw) scale(0.5);
+    transform-origin: 30% 20%;
   }
 
   .grupo-botones-s3 {
