@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Capa_2" data-name="Capa 2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 113.28 113.76">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+        stroke: url(#Degradado_sin_nombre_169);
+        stroke-miterlimit: 10;
+        stroke-width: 1.39px;
+      }
+
+      .cls-2 {
+        filter: url(#outer-glow-2);
+      }
+
+      .cls-3 {
+        filter: url(#outer-glow-1);
+      }
+
+      .cls-4 {
+        fill: #c6d5e5;
+      }
+    </style>
+    <filter id="outer-glow-1" x="15.36" y="15.84" width="82.56" height="82.08" filterUnits="userSpaceOnUse">
+      <feOffset dx="0" dy="0"/>
+      <feGaussianBlur result="blur" stdDeviation="3.28"/>
+      <feFlood flood-color="#fff" flood-opacity=".75"/>
+      <feComposite in2="blur" operator="in"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <linearGradient id="Degradado_sin_nombre_169" data-name="Degradado sin nombre 169" x1="55.08" y1="19.48" x2="82.28" y2="75.61" gradientTransform="translate(-25.49 71.81) rotate(-45)" gradientUnits="userSpaceOnUse">
+      <stop offset=".03" stop-color="#42182e"/>
+      <stop offset=".09" stop-color="#451e34"/>
+      <stop offset=".18" stop-color="#503148"/>
+      <stop offset=".29" stop-color="#614f68"/>
+      <stop offset=".41" stop-color="#787a94"/>
+      <stop offset=".54" stop-color="#96b0cc"/>
+      <stop offset=".55" stop-color="#99b4d1"/>
+      <stop offset=".67" stop-color="#b1bdcc" stop-opacity=".72"/>
+      <stop offset=".83" stop-color="#d6cdc5" stop-opacity=".3"/>
+      <stop offset=".88" stop-color="#d6cdc5" stop-opacity=".15"/>
+      <stop offset=".93" stop-color="#d6cdc5" stop-opacity=".04"/>
+      <stop offset=".96" stop-color="#d6cdc5" stop-opacity="0"/>
+    </linearGradient>
+    <filter id="outer-glow-2" x="0" y="0" width="113.28" height="113.76" filterUnits="userSpaceOnUse">
+      <feOffset dx="0" dy="0"/>
+      <feGaussianBlur result="blur-2" stdDeviation="3.28"/>
+      <feFlood flood-color="#fff" flood-opacity=".75"/>
+      <feComposite in2="blur-2" operator="in"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="textos">
+    <g>
+      <g class="cls-3">
+        <circle class="cls-1" cx="56.69" cy="56.86" r="30.48"/>
+      </g>
+      <g class="cls-2">
+        <path class="cls-4" d="M57.39,44.35l-.7-34.15-.7,34.15c-1.66,5.68-6.14,10.15-11.81,11.81l-34.15.7,34.15.7c5.68,1.66,10.15,6.14,11.81,11.81l.7,34.15.7-34.15c1.66-5.68,6.14-10.15,11.81-11.81l34.15-.7-34.15-.7c-5.68-1.66-10.15-6.14-11.81-11.81Z"/>
+      </g>
+    </g>
+  </g>
+</svg>

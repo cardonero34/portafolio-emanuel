@@ -1,0 +1,833 @@
+/* colores */
+
+:root {
+  --color-oliva: #A6A182;
+  --color-oliva-A1: #BAB69E;
+  --color-oliva-A2: #CDCAB9;
+  --color-oliva-B1: #7A7660;
+  --color-oliva-B2: #4E4C3D;
+  --color-vino: #42182E;
+  --color-vino-A1: #6C4B5C;
+  --color-vino-A2: #957E8A;
+  --color-vino-B1: #311222;
+  --color-vino-B2: #1F0B16;
+  --color-crema: #D6CDC5;
+  --color-crem-A1: #DFD8D2;
+  --color-crem-A2: #E8E3DF;
+  --color-crem-b1: #9E9791;
+  --color-crem-b2: #65615D;
+  --color-azul: #99B4D1;
+  --color-azul-A1: #AFC5DB;
+  --color-azul-A2: #C6D5E5;
+  --color-azul-B1: #71849A;
+  --color-azul-B2: #485563;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+/* #region Decoraciones */
+.decoracion {
+  position: absolute;
+  pointer-events: none;
+  z-index: 10;
+}
+
+.decoracion img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.d1 {
+  left: 22.3vw;
+  top: 14vh;
+  width: 13vw;
+}
+
+.d2 {
+  width: 12vw;
+  right: 30.4vw;
+  top: 16vh;
+}
+
+.d3 {
+  width: 25vw;
+  top: 80vh;
+  left: 25vw;
+}
+
+.d4 {
+  width: 30vw;
+  top: 40vh;
+  left: 2vw;
+}
+
+.d5 {
+  width: 20vw;
+  top: 115vh;
+  right: 3vw;
+  scale: -1 1;
+}
+
+.d6 {
+  width: 15vw;
+  bottom: 75vh;
+  right: 23vw;
+}
+
+.d7 {
+  width: 7vw;
+  bottom: 67vh;
+  right: 41vw;
+  rotate: 90deg;
+}
+
+.d8 {
+  width: 15vw;
+  bottom: 81vh;
+  left: 31vw;
+  rotate: -5deg;
+
+}
+
+.d9 {
+  width: 25vw;
+  bottom: 60vh;
+  right: 50vw;
+  rotate: 90deg;
+}
+
+/* #endregion Decoraciones */
+
+.portafolio {
+  position: relative;
+  isolation: isolate;
+}
+
+.cinta-global {
+  position: absolute;
+  z-index: 2;
+  top: 345vh;
+  left: 0;
+  width: 95vw;
+  height: auto;
+  overflow: visible;
+  pointer-events: none;
+  user-select: none;
+}
+
+header {
+  position: absolute;
+  z-index: 4;
+  display: flex;
+  width: 100%;
+  height: 20vh;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 10vh;
+  text-align: center;
+
+  h1 {
+    margin: 0;
+    color: #42182e;
+    font-family: var(--font-playfair), Georgia, serif;
+    font-size: 14.5vw;
+    font-weight: 900;
+    line-height: 0.9;
+  }
+
+  h2 {
+    margin: 5vh 0 3vh;
+    color: #536474;
+    font-family: var(--font-crimson), Georgia, serif;
+    font-size: 3vw;
+    font-weight: 700;
+    line-height: 1;
+  }
+
+  p {
+    width: 62vw;
+    max-width: 40rem;
+    margin: 0;
+    color: #171516;
+    font-family: Arial, sans-serif;
+    font-size: 1.5vw;
+    line-height: 1.2;
+  }
+}
+
+/* #region Sección 1 */
+.zona_I {
+  position: relative;
+  width: 100%;
+  height: 350vh;
+  background-color: var(--color-crema);
+}
+
+.fondoI {
+  position: absolute;
+  pointer-events: none;
+  user-select: none;
+}
+
+.fI1 {
+  z-index: 1;
+  top: -5vh;
+  left: -28vw;
+  width: 135vw;
+}
+
+.fI2 {
+  z-index: 0;
+  top: 70vh;
+  left: -60vw;
+  width: 200vw;
+}
+
+.fI3 {
+  z-index: 1;
+  bottom: -5vh;
+  right: -28vw;
+  width: 135vw;
+}
+
+.cont-Z1 {
+  position: absolute;
+  z-index: 3;
+  inset: 0;
+  top: 30%;
+}
+
+.grupo-frases,
+.grupo-flor {
+  display: contents;
+}
+
+.frase1,
+.frase2 {
+  position: absolute;
+  z-index: 5;
+  width: 32vw;
+  color: #211a1b;
+  text-align: center;
+
+  h3 {
+    margin: 0 0 0.4vh;
+    color: #635f4d;
+    font-family: var(--font-playfair), Georgia, serif;
+    font-size: 5vw;
+    font-weight: 700;
+    line-height: 1;
+  }
+
+  p {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    font-size: 2.1vw;
+    line-height: 1.2;
+  }
+
+}
+
+.frase1 {
+  top: 86vh;
+  left: 7%;
+}
+
+.frase2 {
+  top: 63vh;
+  right: 7%;
+}
+
+.vara,
+.flor {
+  position: absolute;
+  display: block;
+  height: auto;
+  max-width: none;
+  left: 50%;
+  object-fit: contain;
+  pointer-events: none;
+  transform: translateX(-50%);
+  user-select: none;
+}
+
+.vara {
+  z-index: 1;
+  top: 36vh;
+  width: 75vw;
+  rotate: -3deg;
+  left: 48%;
+}
+
+.flor {
+  z-index: 2;
+  top: -75vh;
+  width: 85vw;
+  rotate: -15deg;
+}
+
+/* #endregion Sección 1 */
+
+/* #region Dección 2 */
+.Nombre_seccion {
+  position: absolute;
+  width: 40vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  left: 15vw;
+  top: -20vh;
+
+  h2 {
+    margin: 1rem 0 1rem;
+    color: #536474;
+    font-family: var(--font-crimson), Georgia, serif;
+    font-size: 7rem;
+    font-weight: 700;
+  }
+
+  p {
+    width: 62vw;
+    max-width: 40rem;
+    margin: 0;
+    color: #171516;
+    font-family: Arial, sans-serif;
+    font-size: 1.5vw;
+    line-height: 1.2;
+  }
+}
+
+.zona_II {
+  position: relative;
+  width: 100%;
+  height: 200vh;
+  background-color: var(--color-crema);
+}
+
+.fondoII {
+  position: absolute;
+  pointer-events: none;
+  user-select: none;
+}
+
+.fII1 {
+  z-index: 1;
+  top: 50vh;
+  left: -7vw;
+  width: 135vw;
+}
+
+.fII2 {
+  z-index: 0;
+  top: -40vh;
+  left: -60vw;
+  width: 200vw;
+}
+
+.fII3 {
+  z-index: 1;
+  bottom: 40vh;
+  right: -15vw;
+  width: 145vw;
+}
+
+.contenedor-card-II {
+  position: absolute;
+  z-index: 2;
+  inset: 0;
+  transform: translateX(3vw) scale(85%);
+
+  .grupo-boton-II {
+    display: contents;
+  }
+
+  .card-II,
+  .foto-II,
+  .texto-card-II,
+  .boton-II,
+  .forma-boton-II,
+  .destello-II {
+    position: absolute;
+  }
+
+  .card-II {
+    /* tarjeta de texto */
+    z-index: 3;
+    top: 16vh;
+    right: 1vw;
+    width: 70%;
+    height: auto;
+    pointer-events: none;
+  }
+
+  .foto-II {
+    /* foto container */
+    z-index: 4;
+    padding: 0.5rem;
+    background: var(--color-crema);
+    border: 2px solid rgb(76 34 56 / 18%);
+    border-radius: 0.6vw;
+    box-shadow: 0 0.5rem 1.4vh rgb(66 24 46 / 30%);
+  }
+
+  .foto-II::after {
+    /* cinta */
+    position: absolute;
+    z-index: 2;
+    top: -5%;
+    left: 50%;
+    width: 45%;
+    height: 14%;
+    content: "";
+    background: linear-gradient(105deg, #42182e 0%, #6c4b5c 55%, #9db7d0 100%);
+    filter: blur(0.2vw);
+    transform: translateX(-50%) rotate(-6deg);
+    pointer-events: none;
+  }
+
+  /* fotos */
+  .foto-II-izquierda {
+    /* grande 1 */
+    top: 45vh;
+    left: 26vw;
+    width: 17rem;
+    height: 22rem;
+    rotate: 15deg;
+  }
+
+  .foto-II-derecha {
+    /* grande 2*/
+    top: 18vh;
+    right: 3vw;
+    width: 20rem;
+    height: 18rem;
+    rotate: -15deg;
+  }
+
+  .foto-II-mini-izquierda {
+    /* pequeña 1 */
+    top: 70vh;
+    left: 32vw;
+    rotate: -10deg;
+    z-index: 5;
+    width: 14rem;
+    height: 16rem;
+  }
+
+  .foto-II-mini-derecha {
+    /* pequeña 2 */
+    top: 36vh;
+    right: 2.5vw;
+    width: 12rem;
+    height: 14rem;
+    rotate: 5deg;
+  }
+
+  .foto-II-imagen {
+    width: 100%;
+    height: 85%;
+    border: 0.4rem solid var(--color-crema);
+    box-shadow: 0 0 0.8vw rgb(66 24 46 / 25%);
+    padding: 0.5rem;
+  }
+
+  /* colores */
+  .foto-II-imagen-azul {
+    background: linear-gradient(145deg, var(--color-azul-B1), var(--color-azul-B2));
+  }
+
+  .foto-II-imagen-oliva {
+    background: linear-gradient(145deg, var(--color-oliva), var(--color-oliva-B1));
+  }
+
+  .foto-II-imagen-azul-oscuro {
+    background: linear-gradient(145deg, var(--color-azul-B2), #34404d);
+  }
+
+  .foto-II-imagen-vino {
+    background: linear-gradient(145deg, var(--color-vino-A1), var(--color-vino-B1));
+  }
+
+  /* contenido */
+  .texto-card-II {
+    z-index: 5;
+    top: 51vh;
+    right: 17vw;
+    width: 35vw;
+    color: #171516;
+    text-align: center;
+
+    h2 {
+      margin: 0 0 1.6vh;
+      font-family: var(--font-playfair), Georgia, serif;
+      margin-bottom: 2rem;
+      font-size: 3.5rem;
+      font-weight: 800;
+      line-height: 1;
+    }
+
+    p {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      font-size: 1.3rem;
+      line-height: 1.25;
+    }
+  }
+
+  .boton-II {
+    /* texto */
+    z-index: 6;
+    top: 83vh;
+    right: -0.2vw;
+    width: 32vw;
+    color: #211a1b;
+
+    h3 {
+      font-family: Arial, sans-serif;
+      font-size: 1.5rem;
+      font-weight: 700;
+    }
+  }
+
+  .forma-boton-II {
+    z-index: 5;
+    top: 20vh;
+    left: 30vw;
+    width: 90rem;
+    cursor: pointer;
+  }
+}
+
+/* #endregion Sección 2 */
+
+/* #region Sección 3 */
+
+.zona_III {
+  position: relative;
+  z-index: 2;
+  inset: 0;
+  width: 100%;
+  height: 30vh;
+  transform: translateY(-4vw) scale(85%);
+}
+
+.grupo-botones-s3 {
+  position: absolute;
+  z-index: 2;
+  inset: 0;
+}
+
+.boton-s3 {
+  position: absolute;
+  color: #211a1b;
+  font-family: Arial, sans-serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.visual-boton-s3 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 30rem;
+  pointer-events: none;
+
+  img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  span {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    top: 10vh;
+    left: 6vw;
+  }
+}
+
+.boton-s3-verde {
+  top: -71vh;
+  left: 10vw;
+  padding-top: 1rem;
+  z-index: 5;
+}
+
+.boton-s3-morado {
+  top: -80vh;
+  left: 40vw;
+  color: var(--color-crem-A2);
+}
+
+.boton-s3-azul {
+  top: -60vh;
+  left: 26vw;
+  padding-top: 1rem;
+}
+
+/* #endregion Sección3 */
+
+/* #region Sección 4*/
+
+/* #endregion Sección 4 */
+
+/* #region Ajustes responsive */
+@media (max-width: 768px) {
+  header {
+    height: auto;
+    padding: clamp(2rem, 7vh, 4rem) 1rem 0;
+
+    h1 { font-size: clamp(3.4rem, 14vw, 7rem); }
+    h2 {
+      margin: 1rem 0 0.75rem;
+      font-size: clamp(1.25rem, 4.5vw, 2rem);
+    }
+    p {
+      width: min(88vw, 35rem);
+      font-size: clamp(0.75rem, 2.4vw, 1rem);
+    }
+  }
+
+  .d1 { top: 12vh; left: 8vw; width: 17vw; }
+  .d2 { top: 15vh; right: 8vw; width: 16vw; }
+  .d3 { width: 30vw; }
+  .d4 { width: 32vw; }
+  .d5 { width: 25vw; }
+  .d6 { width: 20vw; }
+  .d7 { width: 10vw; }
+  .d8 { width: 19vw; }
+
+  .cinta-global { width: 100vw; }
+
+  .grupo-frases,
+  .grupo-flor {
+    position: absolute;
+    inset: 0;
+    display: block;
+  }
+
+  .grupo-frases {
+    transform: translate(0, 0) scale(0.94);
+    transform-origin: 50% 0;
+  }
+
+  .grupo-flor {
+    transform: translate(0, 0) scale(0.9);
+    transform-origin: 50% 0;
+  }
+
+  .frase1,
+  .frase2 {
+    width: 39vw;
+
+    h3 { font-size: clamp(1.5rem, 5vw, 2.5rem); }
+    p { font-size: clamp(0.7rem, 2.25vw, 1rem); }
+  }
+
+  /* Mantener la flor y la vara en proporción; el top de la vara calcula
+     el borde inferior de la orquídea según la relación ancho/alto del viewport. */
+  .flor { width: 85vw; }
+  .vara {
+    top: calc(85vw - 75vh);
+    width: 75vw;
+  }
+
+  .Nombre_seccion {
+    left: 5vw;
+    width: 90vw;
+
+    h2 {
+      margin: 0.5rem 0;
+      font-size: clamp(2.25rem, 8vw, 4rem);
+    }
+
+    p {
+      width: 86vw;
+      font-size: clamp(0.75rem, 2.4vw, 1rem);
+    }
+  }
+
+  /* La tarjeta, fotos, texto y botón se escalan como una sola composición. */
+  .contenedor-card-II {
+    transform: translateX(3vw) scale(0.9);
+    transform-origin: 50% 0;
+
+    .foto-II-izquierda {
+      width: clamp(8rem, 29vw, 17rem);
+      height: clamp(10rem, 36vw, 22rem);
+    }
+
+    .foto-II-derecha {
+      width: clamp(9rem, 34vw, 20rem);
+      height: clamp(8rem, 31vw, 18rem);
+    }
+
+    .foto-II-mini-izquierda {
+      width: clamp(6.5rem, 23vw, 14rem);
+      height: clamp(7.5rem, 27vw, 16rem);
+    }
+
+    .foto-II-mini-derecha {
+      width: clamp(6rem, 20vw, 12rem);
+      height: clamp(7rem, 23vw, 14rem);
+    }
+
+    .texto-card-II {
+      right: 10vw;
+      width: 50vw;
+
+      h2 { font-size: clamp(1.5rem, 4.5vw, 3.5rem); }
+      p { font-size: clamp(0.78rem, 1.7vw, 1.3rem); }
+    }
+
+    .grupo-boton-II {
+      position: absolute;
+      top: 64vh;
+      left: 38vw;
+      display: block;
+      width: clamp(16rem, 55vw, 42rem);
+      aspect-ratio: 1796 / 1460;
+    }
+
+    .forma-boton-II {
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: fill;
+    }
+
+    .boton-II {
+      top: 50%;
+      right: auto;
+      left: 50%;
+      width: 78%;
+      text-align: center;
+      transform: translate(-50%, -50%);
+
+      h3 { font-size: clamp(0.8rem, 1.8vw, 1.25rem); }
+    }
+  }
+
+  /* El arte y su rótulo viven dentro del mismo grupo para mantener el centrado. */
+  .grupo-botones-s3 {
+    transform: translate(0, 0) scale(0.9);
+    transform-origin: 50% 0;
+  }
+
+  .boton-s3 {
+    width: clamp(11rem, 38vw, 24rem);
+    aspect-ratio: 2.6 / 1;
+    padding: 0;
+    font-size: clamp(0.72rem, 2vw, 1.15rem);
+
+    .visual-boton-s3 {
+      width: 100%;
+      height: 100%;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: fill;
+      }
+    }
+
+    span {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 78%;
+      font-size: inherit;
+      line-height: 1.15;
+      transform: translate(-50%, -50%);
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  header {
+    padding-top: 2.5rem;
+
+    h1 { font-size: clamp(3.1rem, 14.5vw, 4.5rem); }
+    h2 { font-size: clamp(1.1rem, 4.8vw, 1.5rem); }
+    p { width: 90vw; font-size: 0.72rem; }
+  }
+
+  .d1 { top: 13vh; left: 4vw; width: 19vw; }
+  .d2 { top: 16vh; right: 4vw; width: 18vw; }
+
+  .grupo-frases { transform: translate(0, 0) scale(0.9); }
+  .grupo-flor { transform: translate(0, 0) scale(0.84); }
+
+  .frase1,
+  .frase2 {
+    width: 42vw;
+
+    h3 { font-size: clamp(1.25rem, 5.4vw, 1.75rem); }
+    p { font-size: clamp(0.65rem, 2.7vw, 0.8rem); }
+  }
+
+  .Nombre_seccion {
+    width: 90vw;
+    h2 { font-size: clamp(2rem, 9vw, 2.8rem); }
+    p { font-size: 0.72rem; }
+  }
+
+  .contenedor-card-II {
+    transform: translateX(3vw) scale(0.82);
+
+    .foto-II-izquierda {
+      width: clamp(7rem, 29vw, 14rem);
+      height: clamp(9rem, 36vw, 18rem);
+    }
+
+    .foto-II-derecha {
+      width: clamp(7.5rem, 34vw, 16rem);
+      height: clamp(7rem, 31vw, 15rem);
+    }
+
+    .foto-II-mini-izquierda {
+      width: clamp(5.5rem, 23vw, 11rem);
+      height: clamp(6.5rem, 27vw, 13rem);
+    }
+
+    .foto-II-mini-derecha {
+      width: clamp(5rem, 20vw, 10rem);
+      height: clamp(6rem, 23vw, 11rem);
+    }
+
+    .texto-card-II {
+      right: 7vw;
+      width: 54vw;
+
+      h2 { font-size: clamp(1.25rem, 4.5vw, 2rem); }
+      p { font-size: clamp(0.68rem, 2.2vw, 0.9rem); }
+    }
+
+    .grupo-boton-II {
+      top: 66vh;
+      left: 33vw;
+      width: 62vw;
+    }
+
+    .boton-II h3 { font-size: clamp(0.68rem, 2vw, 0.85rem); }
+  }
+
+  .grupo-botones-s3 {
+    transform: translate(0, 0) scale(0.84);
+  }
+
+  .boton-s3 {
+    width: clamp(10rem, 48vw, 18rem);
+    aspect-ratio: 2.6 / 1;
+    font-size: clamp(0.6rem, 2.2vw, 0.8rem);
+
+    span { width: 80%; }
+  }
+}
+/* #endregion Ajustes responsive */
